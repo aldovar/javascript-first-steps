@@ -1,17 +1,26 @@
 function fibonacci(number){
-    var plus=0;
-    var lastNumber=0;
-    var oneAndOne=true;
-    for(var i=0; number>i;i++){
-        
-        plus=plus+i;
+    var numberOne=1;
+    var numberTwo=0;
+    var fibonacci=0;
     
-        if(oneAndOne){
-            console.log(i);
-            oneAndOne=false;
-        }else{
-            console.log(plus);
-           oneAndOne=true; 
-        }
+    for(var i=0; number>i;i++){
+        fibonacci=numberOne+numberTwo;
+        console.log(fibonacci);
+        numberTwo=numberOne;
+        numberOne=fibonacci;
     }
 }
+
+/**
+    1 + 0 = 1 
+
+    1 + 1 = 2 
+
+    2 + 1 = 3 
+
+    3 + 2 = 5 
+
+    5 + 3 = 8 
+
+    8 + 5 = 13 ... 
+**/
